@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Contact — Court Clicks Travels</title>
+  <title>Contact Court Clicks Travels</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Contact Court Clicks Travels for quotes, bookings or questions.">
+  <meta name="description" content="Contact Court Clicks Travels for curated trips & travel packages from Kochi.">
   <link rel="preload" href="css/style.css" as="style">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Header / Navigation -->
   <header class="header">
     <div class="container">
       <a class="brand" href="index.html">Court Clicks Travels</a>
@@ -18,26 +19,43 @@
         <a href="services.html">Services</a>
         <a href="destinations.html">Destinations</a>
         <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
         <a href="testimonials.html">Testimonials</a>
       </nav>
     </div>
   </header>
-  <main class="container">
-    <section class="section">
-      <h2>Contact Us</h2>
-      <p>Send your enquiry and we'll get back within 24 hours.</p>
-      <div id="form-status" style="padding:10px; border-radius:8px; display:none; margin-bottom:10px;"></div>
-      <form id="contactForm" aria-label="Contact form">
-        <input name="name" type="text" placeholder="Your name *" required>
-        <input name="email" type="email" placeholder="Email address *" required>
-        <input name="phone" type="tel" placeholder="Phone (optional)">
-        <textarea name="message" rows="6" placeholder="Write your message *" required></textarea>
-        <button type="submit">Submit Enquiry</button>
-        <small>We respect your privacy. Your info will not be shared.</small>
-      </form>
-    </section>
+
+  <!-- Main Content / Contact Form -->
+  <main class="container section">
+    <h2 style="text-align:center; margin-bottom:24px; color:#0d47a1;">Contact Us</h2>
+    <p style="text-align:center; margin-bottom:40px; color:#555;">Have questions or want a custom travel package? Fill out the form below and we’ll get back to you shortly.</p>
+
+    <form action="https://formspree.io/f/mvgeqwzq" method="POST" class="contact-form" style="max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:20px;">
+      <div class="form-group" style="display:flex; flex-direction:column;">
+        <label for="name" style="margin-bottom:6px; font-weight:bold;">Name</label>
+        <input type="text" id="name" name="name" required
+               style="padding:12px; border:1px solid #ccc; border-radius:6px; font-size:16px;">
+      </div>
+
+      <div class="form-group" style="display:flex; flex-direction:column;">
+        <label for="email" style="margin-bottom:6px; font-weight:bold;">Email</label>
+        <input type="email" id="email" name="email" required
+               style="padding:12px; border:1px solid #ccc; border-radius:6px; font-size:16px;">
+      </div>
+
+      <div class="form-group" style="display:flex; flex-direction:column;">
+        <label for="message" style="margin-bottom:6px; font-weight:bold;">Message</label>
+        <textarea id="message" name="message" rows="6" required
+                  style="padding:12px; border:1px solid #ccc; border-radius:6px; font-size:16px; resize:vertical;"></textarea>
+      </div>
+
+      <button type="submit" class="btn" style="background-color:#0d47a1; color:white; padding:12px; font-size:16px; border:none; border-radius:6px; cursor:pointer; transition:0.3s;">
+        Send Enquiry
+      </button>
+    </form>
   </main>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <p>Email: <a href="mailto:noonesuii9@gmail.com">noonesuii9@gmail.com</a> | Phone: 7902649908 | Kochi, Ernakulam</p>
@@ -51,6 +69,7 @@
       <p style="margin-top:8px">© 2025 Court Clicks Travels</p>
     </div>
   </footer>
+
   <script src="js/script.js" defer></script>
 </body>
 </html>
